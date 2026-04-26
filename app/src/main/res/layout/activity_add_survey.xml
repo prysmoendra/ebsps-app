@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_marginTop="16dp"
+    tools:context=".AddSurveyActivity">
+
+    <!-- Fixed Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp">
+
+        <!-- Header with Back Button and Title -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_back"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Kembali"
+                android:padding="12dp" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Tambah Survey Baru"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange_primary" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Nama Pemilik Rumah -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Pemilik Rumah"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/et_owner_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan nama pemilik rumah"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Alamat -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan alamat lengkap"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Ambil Foto Rumah -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_take_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📷 Ambil Foto Rumah"
+                android:backgroundTint="#FF9B00"
+                android:textColor="@color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                app:cornerRadius="4dp" />
+
+            <!-- Kondisi Atap -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kondisi Atap"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_roof_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <RadioButton
+                    android:id="@+id/rb_roof_baik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Baik"
+                    android:padding="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_roof_rusak_ringan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rusak Ringan"
+                    android:padding="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_roof_rusak_berat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rusak Berat"
+                    android:padding="8dp" />
+            </RadioGroup>
+
+            <!-- Kondisi Dinding -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kondisi Dinding"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_wall_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <RadioButton
+                    android:id="@+id/rb_wall_kokoh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kokoh"
+                    android:padding="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_wall_retak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Retak"
+                    android:padding="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_wall_papan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Papan/Bambu"
+                    android:padding="8dp" />
+            </RadioGroup>
+
+            <!-- Kondisi Lantai -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kondisi Lantai"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_floor_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <RadioButton
+                    android:id="@+id/rb_floor_keramik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Keramik/Semen"
+                    android:padding="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_floor_tanah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tanah"
+                    android:padding="8dp" />
+            </RadioGroup>
+
+            <!-- Sanitasi -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sanitasi"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_sanitation_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <RadioButton
+                    android:id="@+id/rb_sanitation_ada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ada"
+                    android:padding="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_sanitation_tidak_ada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak Ada"
+                    android:padding="8dp" />
+            </RadioGroup>
+
+            <!-- Simpan Survey -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_survey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📝 Simpan Survey"
+                android:backgroundTint="#FF9B00"
+                android:textColor="@color/white"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="32dp"
+                app:cornerRadius="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

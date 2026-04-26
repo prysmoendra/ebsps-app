@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ebsps</string>
+    <string name="app_logo">App Logo</string>
+    <string name="onboarding_image">Onboarding Image</string>
+    <string name="add_survey">Add Survey</string>
+    <string name="survey_image">Survey Image</string>
+</resources>

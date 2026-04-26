@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Orange color from e-BSPS logo -->
+    <color name="orange_btn">#FF9B00</color>
+    <color name="orange_primary">#2D3566</color>
+    <color name="orange_dark">#FFB300</color>
+    <color name="orange_light">#FFE082</color>
+    
+    <!-- Additional colors for better UI -->
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_medium">#CCCCCC</color>
+    <color name="gray_dark">#666666</color>
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_hint">#999999</color>
+</resources>
